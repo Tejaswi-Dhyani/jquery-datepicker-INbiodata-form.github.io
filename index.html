@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biodata-form with jquery datepicker</title>
+    <link rel="stylesheet" href="jquery-ui.min.css">
+    <style>
+        body{
+            background: rgb(250, 211, 243)!important;
+           
+            z-index: 0;
+        }
+        .sub{
+            height: 30px;
+            padding: .300rem .50rem;
+            font-size: 1.2rem;
+            line-height: 1;
+            background-color: rgb(174, 217, 224);
+            border-radius: .25rem;
+        }
+        .formstyle{
+            width: 80%;
+            height: 30px;
+            padding: .375rem .75rem;
+            font-size: 1rem;
+            line-height: 1.5;
+            color: #495057;
+            
+            border: 1px solid #c5d9f0;
+            border-radius: .25rem;
+        }
+        input:focus{
+            outline:none !important;
+    outline-width: 0 !important;
+    /* box-shadow: none; */
+     box-shadow: 0 0 0.2rem rgb(33, 92, 219)!important;
+    border: 2px solid #0f6fdd!important; 
+}
+    </style>
+</head>
+<body>
+<h1 style="text-align: center;">ENTER YOUR BIODATA</h1>
+<form action="http://www.csjmu.ac.in." method="get" style="z-index: 1;">
+    <fieldset>
+     <legend style="font-size: 1.6em;">Biodata</legend>   
+     Name: <input type="text" size="30"  required placeholder="username" class="formstyle"><br><br>
+     Email: <input type="text" size="30"required placeholder="abc@abc.com" class="formstyle"><br><br>
+     D O B: <input type="text" size="30" required id="datepicker" class="formstyle"> <br> <br> <br>
+ <center><input type="submit" value="SUBMIT" class="sub"> </center>    
+    </fieldset>
+</form>
+
+<script src="jquery-3.6.0.min.js"></script>
+<script src="jquery-ui.min.js"></script>
+
+<script>
+    
+$("#datepicker").datepicker({
+    dateFormat:"dd-mm-yy",
+    changeMonth:true,
+    changeYear:true,
+     maxDate:'+3D'
+    //  maxDate:'+3M'
+    // minDate:"-3M"
+});
+
+ </script>   
+</body>
+</html>
